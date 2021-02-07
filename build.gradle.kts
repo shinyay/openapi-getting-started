@@ -17,6 +17,7 @@ repositories {
 }
 
 dependencies {
+	implementation("de.qaware.tools.openapi-generator-for-spring:openapi-generator-for-spring-starter:1.0.1")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-hateoas")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
