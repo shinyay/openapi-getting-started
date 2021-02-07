@@ -14,4 +14,8 @@ class EmployeeController(val repository: EmployeeRepository) {
     fun findAll(): MutableIterable<Employee> {
         return repository.findAll()
     }
+
+    fun registerEmployee(employee: Employee): Employee {
+        return repository.save(employee)
+    }
 }
