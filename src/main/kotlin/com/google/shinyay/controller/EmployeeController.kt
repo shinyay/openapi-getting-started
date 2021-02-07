@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1")
 class EmployeeController(val repository: EmployeeRepository) {
 
+    @GetMapping("/employees")
     fun findAll(): MutableIterable<Employee> {
         return repository.findAll()
     }
