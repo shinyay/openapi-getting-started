@@ -3,6 +3,7 @@ package com.google.shinyay.controller
 import com.google.shinyay.entity.Employee
 import com.google.shinyay.repository.EmployeeRepository
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -15,6 +16,7 @@ class EmployeeController(val repository: EmployeeRepository) {
         return repository.findAll()
     }
 
+    @PostMapping("/employee")
     fun registerEmployee(employee: Employee): Employee {
         return repository.save(employee)
     }
