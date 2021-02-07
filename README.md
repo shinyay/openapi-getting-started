@@ -1,4 +1,4 @@
-# Name
+# Getting Started with OpenAPI Generator
 
 Overview
 
