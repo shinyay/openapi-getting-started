@@ -13,6 +13,11 @@ class EmployeeController(val repository: EmployeeRepository) {
         return repository.findAll()
     }
 
+    @GetMapping("/employees/{id}")
+    fun findById() {
+        
+    }
+
     @PostMapping("/employees")
     fun registerEmployee(@RequestBody employee: Employee): Employee {
         return repository.save(employee)
