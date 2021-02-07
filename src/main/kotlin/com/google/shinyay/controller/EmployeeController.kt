@@ -19,7 +19,8 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @PutMapping("/employees/{id}")
-    fun updateEmployee() {
+    fun updateEmployee(@RequestBody employee: Employee,
+                       @PathVariable id: Long) {
 
     }
 }
