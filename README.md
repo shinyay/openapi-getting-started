@@ -18,6 +18,7 @@ Overview
 ## Installation
 
 ## References
+- [OpenAPI v3 generator for Spring Boot](https://github.com/qaware/openapi-generator-for-spring)
 
 ## Licence
 
