@@ -3,6 +3,9 @@
 Overview
 
 ## Description
+### Dependency
+- `de.qaware.tools.openapi-generator-for-spring`
+  - `openapi-generator-for-spring-starter:1.0.1`
 
 ## Demo
 
