@@ -39,7 +39,7 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @DeleteMapping("/employees/{id}")
-    fun deleteEmployee() {
-
+    fun deleteEmployee(@RequestParam id: Long) {
+        repository.deleteById(id)
     }
 }
