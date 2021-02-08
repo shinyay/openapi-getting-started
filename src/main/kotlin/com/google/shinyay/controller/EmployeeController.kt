@@ -38,6 +38,7 @@ class EmployeeController(val repository: EmployeeRepository) {
                 }
     }
 
+    @DeleteMapping("/employees/{id}")
     fun deleteEmployee() {
 
     }
