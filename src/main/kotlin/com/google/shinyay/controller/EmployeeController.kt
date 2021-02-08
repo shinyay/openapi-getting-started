@@ -36,6 +36,9 @@ class EmployeeController(val repository: EmployeeRepository) {
                     employee.id = id
                     repository.save(employee)
                 }
+    }
+
+    fun deleteEmployee() {
 
     }
 }
