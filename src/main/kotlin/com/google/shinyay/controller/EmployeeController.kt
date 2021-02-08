@@ -14,8 +14,8 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @GetMapping("/employees/{id}")
-    fun findById() {
-        
+    fun findById(@PathVariable id: Long): Employee? {
+        return repository.findById(id).orElseThrow()
     }
 
     @PostMapping("/employees")
