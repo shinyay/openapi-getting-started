@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-data class Employee(@Id @GeneratedValue val id: Long,
-                    val firstName: String,
-                    val lastName: String,
-                    val role: String)
+data class Employee(@Id @GeneratedValue var id: Long,
+                    var firstName: String,
+                    var lastName: String,
+                    var role: String)
