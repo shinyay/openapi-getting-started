@@ -1,7 +1,7 @@
-create table employee if not exists (
-    id bigint not null,
-    first_name varchar(50),
-    last_name varchar(50),
-    role varchar(25),
-    primary key (id)
-)
+CREATE TABLE IF NOT EXISTS
+employee (
+  id          BIGINT PRIMARY KEY AUTO_INCREMENT,
+  first_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
+  role VARCHAR(25)
+  );
