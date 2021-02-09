@@ -1,7 +1,3 @@
-create table employee (
-    id bigint not null,
-    first_name varchar(50),
-    last_name varchar(50),
-    role varchar(25),
-    primary key (id)
-)
+INSERT INTO employee (first_name, last_name, role) select  'Rei', 'Ayanami', 'Designer' where not exists (select * from employee where first_name = 'Rei');
+INSERT INTO employee (first_name, last_name, role) select  'Asuka', 'Langley', 'Developer' where not exists (select * from employee where first_name = 'Asuka');
+INSERT INTO employee (first_name, last_name, role) select  'Shinji', 'Ikari', 'Operator' where not exists (select * from employee where first_name = 'Shinji');
