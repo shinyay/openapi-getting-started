@@ -8,7 +8,8 @@ Overview
   - `openapi-generator-for-spring-starter:1.0.1`
 
 ## Demo
-
+### H2 Database Console
+- [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 ## Features
 
 - feature:1
