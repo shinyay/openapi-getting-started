@@ -1,3 +1,6 @@
 spring:
   application:
     name: openapi-app
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
