@@ -9,3 +9,6 @@ spring:
     username: sa
     password: password
     sql-script-encoding: UTF-8
+  h2:
+    console:
+      enabled: true
