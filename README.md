@@ -63,6 +63,11 @@ $ gcloud api-gateway api-configs create employee-app-config \
     --backend-auth-service-account spring-app@(gcloud config get-value project).iam.gserviceaccount.com
 ```
 
+```shell script
+$ gcloud api-gateway api-configs describe employee-app-config \
+    --api employee-app \
+    --project (gcloud config get-value project)
+```
 
 ## Features
 
