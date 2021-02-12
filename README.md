@@ -24,9 +24,25 @@ Access `swagger-ui`
 $ gcloud beta run deploy --memory 512Mi --source .
 ```
 
-### Access to Service on Cloud Run
+#### Access to Service on Cloud Run
 ```shell script
 $ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" (gcloud run services list --format json |jq -r .[0].status.url)/api/v1/employees
+```
+
+### API Gateway
+#### Enable Services
+We enable the following Google services:
+
+|Name|Title|
+|----|-----|
+|apigateway.googleapis.com|API Gateway API|
+|servicemanagement.googleapis.com|Service Management API|
+|servicecontrol.googleapis.com|Service Control API|
+
+```shell script
+$ gcloud services enable apigateway.googleapis.com
+$ gcloud services enable servicemanagement.googleapis.com
+$ gcloud services enable servicecontrol.googleapis.com
 ```
 
 ## Features
