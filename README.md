@@ -30,6 +30,12 @@ $ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" (gcloud r
 ```
 
 ### API Gateway
+#### Service Account
+```shell script
+$ gcloud iam service-accounts create spring-app --display-name "Spring App"
+
+```
+
 #### Enable Services
 We enable the following Google services:
 
