@@ -69,6 +69,15 @@ $ gcloud api-gateway api-configs describe employee-app-config \
     --project (gcloud config get-value project)
 ```
 
+#### Deploy API on API Gateway
+
+```shell script
+gcloud api-gateway gateways create shinyay-gateway \
+  --api employee-app \
+  --api-config employee-app-config \
+  --location us-central1 \
+  --project (gcloud config get-value project)
+```
 ## Features
 
 - feature:1
