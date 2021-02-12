@@ -33,7 +33,10 @@ $ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" (gcloud r
 #### Service Account
 ```shell script
 $ gcloud iam service-accounts create spring-app --display-name "Spring App"
-
+$ gcloud iam service-accounts list
+$ gcloud projects add-iam-policy-binding (gcloud config get-value project) \                                                                                                   4458ms  2021-02-12 15:26
+    --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
+    --role roles/iam.serviceAccountUser
 ```
 
 #### Enable Services
