@@ -78,6 +78,15 @@ gcloud api-gateway gateways create shinyay-gateway \
   --location us-central1 \
   --project (gcloud config get-value project)
 ```
+
+```shell script
+$ gcloud run services add-iam-policy-binding employee-app \
+    --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
+    --role roles/run.invoker \
+    --platform managed \
+    --region us-central1 \
+    --project (gcloud config get-value project)
+```
 ## Features
 
 - feature:1
