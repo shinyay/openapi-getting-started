@@ -1,0 +1,118 @@
+---
+openapi: 3.0.1
+info:
+  title: employee-app
+  description: Employee API
+  version: '1.0'
+schemes:
+  - https
+produces:
+  - application/json
+x-google-backend:
+  address: https://employee-app-l2a4p5newq-uc.a.run.app
+tags:
+- name: Employee Management
+paths:
+  "/api/v1/employees":
+    get:
+      tags:
+      - Employee Management
+      operationId: findAll
+      responses:
+        '200':
+          description: Default response
+          content:
+            "*/*":
+              schema:
+                type: object
+    post:
+      tags:
+      - Employee Management
+      operationId: registerEmployee
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/Employee"
+        required: true
+      responses:
+        '200':
+          "$ref": "#/components/responses/200"
+  "/api/v1/employees/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: Unique Identifier for Employee
+      required: true
+      schema:
+        "$ref": "#/components/schemas/integer_int64"
+    get:
+      tags:
+      - Employee Management
+      operationId: findById
+      responses:
+        '200':
+          "$ref": "#/components/responses/200"
+    put:
+      tags:
+      - Employee Management
+      operationId: updateEmployee
+      requestBody:
+        content:
+          "*/*":
+            schema:
+              "$ref": "#/components/schemas/Employee"
+        required: true
+      responses:
+        '200':
+          "$ref": "#/components/responses/200"
+    delete:
+      tags:
+      - Employee Management
+      operationId: deleteEmployee
+      parameters:
+      - name: id
+        in: query
+        description: Unique Identifier for Employee
+        required: true
+        schema:
+          "$ref": "#/components/schemas/integer_int64"
+      responses:
+        '200':
+          description: Default response
+  "/api/v1/hello":
+    get:
+      tags:
+      - Employee Management
+      operationId: hello
+      responses:
+        '200':
+          description: Default response
+          content:
+            "*/*":
+              schema:
+                type: string
+components:
+  responses:
+    '200':
+      description: Default response
+      content:
+        "*/*":
+          schema:
+            "$ref": "#/components/schemas/Employee"
+  schemas:
+    integer_int64:
+      type: integer
+      format: int64
+    Employee:
+      type: object
+      properties:
+        id:
+          "$ref": "#/components/schemas/integer_int64"
+        firstName:
+          type: string
+        lastName:
+          type: string
+        role:
+          type: string
+
