@@ -1,9 +1,15 @@
 ---
-openapi: 3.0.1
+openapi: 2.0
 info:
-  title: API for OpenapiGettingStartedApplication
+  title: employee-app
   description: Employee API
   version: '1.0'
+schemes:
+  - https
+produces:
+  - application/json
+x-google-backend:
+  address: https://employee-app-l2a4p5newq-uc.a.run.app
 tags:
 - name: Employee Management
 paths:
