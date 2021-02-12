@@ -2,6 +2,7 @@ package com.google.shinyay.controller
 
 import com.google.shinyay.entity.Employee
 import com.google.shinyay.repository.EmployeeRepository
+import io.swagger.v3.oas.annotations.Parameter
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.*
 
@@ -16,7 +17,7 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @GetMapping("/employees/{id}")
-    fun findById(@PathVariable id: Long): Employee? {
+    fun findById(@PathVariable @Parameter(name = "Employee ID")id: Long): Employee? {
         return repository.findById(id).orElseThrow()
     }
 
