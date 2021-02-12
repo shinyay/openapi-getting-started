@@ -2,10 +2,12 @@ package com.google.shinyay.controller
 
 import com.google.shinyay.entity.Employee
 import com.google.shinyay.repository.EmployeeRepository
+import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1")
+@Tag(name = "Employee Management")
 class EmployeeController(val repository: EmployeeRepository) {
 
     @GetMapping("/employees")
