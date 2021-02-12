@@ -19,6 +19,11 @@ $ gradle bootRun
 Access `swagger-ui`
 - [http://localhost:8080/swagger-ui/](http://localhost:8080/swagger-ui/)
 
+### Deploy to Cloud Run
+```shell script
+$ gcloud beta run deploy --source .
+```
+
 ## Features
 
 - feature:1
