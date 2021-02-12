@@ -54,6 +54,16 @@ $ gcloud services enable servicemanagement.googleapis.com
 $ gcloud services enable servicecontrol.googleapis.com
 ```
 
+#### Create API Config
+```shell script
+$ gcloud api-gateway api-configs create employee-app-config \
+    --api employee-app \
+    --openapi-spec openapi.yml \
+    --project (gcloud config get-value project) \
+    --backend-auth-service-account spring-app@(gcloud config get-value project).iam.gserviceaccount.com
+```
+
+
 ## Features
 
 - feature:1
