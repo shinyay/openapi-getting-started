@@ -21,7 +21,7 @@ Access `swagger-ui`
 
 ### Deploy to Cloud Run
 ```shell script
-$ gcloud beta run deploy --source .
+$ gcloud beta run deploy --memory 512Mi --source .
 ```
 
 ## Features
