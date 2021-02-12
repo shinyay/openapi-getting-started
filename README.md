@@ -21,7 +21,10 @@ Access `swagger-ui`
 
 ### Deploy to Cloud Run
 ```shell script
-$ gcloud beta run deploy --memory 512Mi --source .
+$ gcloud beta run deploy employee-app \
+    --memory 512Mi \
+    --no-allow-unauthenticated \
+    --source .
 ```
 
 #### Access to Service on Cloud Run
