@@ -17,7 +17,7 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @GetMapping("/employees/{id}")
-    fun findById(@PathVariable @Parameter(name = "Employee ID", description = "Unique Identifier for Employee", required = true)id: Long): Employee? {
+    fun findById(@PathVariable @Parameter(name = "Employee ID", description = "Unique Identifier for Employee", required = true) id: Long): Employee? {
         return repository.findById(id).orElseThrow()
     }
 
@@ -28,7 +28,7 @@ class EmployeeController(val repository: EmployeeRepository) {
 
     @PutMapping("/employees/{id}")
     fun updateEmployee(@RequestBody employee: Employee,
-                       @PathVariable id: Long): Employee? {
+                       @PathVariable @Parameter(name = "Employee ID", description = "Unique Identifier for Employee", required = true) id: Long): Employee? {
         return repository.findById(id)
                 .map { foundEmpmoyee ->
                     foundEmpmoyee.firstName = employee.firstName
@@ -42,7 +42,7 @@ class EmployeeController(val repository: EmployeeRepository) {
     }
 
     @DeleteMapping("/employees/{id}")
-    fun deleteEmployee(@RequestParam id: Long) {
+    fun deleteEmployee(@RequestParam @Parameter(name = "Employee ID", description = "Unique Identifier for Employee", required = true) id: Long) {
         repository.deleteById(id)
     }
 }
