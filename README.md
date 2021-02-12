@@ -24,6 +24,11 @@ Access `swagger-ui`
 $ gcloud beta run deploy --memory 512Mi --source .
 ```
 
+### Access to Service on Cloud Run
+```shell script
+$ curl -H "Authorization: Bearer "(gcloud auth print-identity-token)"" (gcloud run services list --format json |jq -r .[0].status.url)/api/v1/employees
+```
+
 ## Features
 
 - feature:1
