@@ -129,6 +129,10 @@ $ gcloud projects remove-iam-policy-binding (gcloud config get-value project) \
     --role roles/iam.serviceAccountUser
 $ gcloud iam service-accounts delete spring-app@(gcloud config get-value project).iam.gserviceaccount.com
 ```
+#### Delete Cloud Run Service
+```shell script
+$ gcloud run services delete employee-app
+```
 
 ## Features
 
