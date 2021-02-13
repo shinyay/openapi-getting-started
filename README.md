@@ -102,6 +102,12 @@ $ gcloud run services add-iam-policy-binding employee-app \
     --region us-central1 \
     --project (gcloud config get-value project)
 ```
+### Clean up
+#### Delete API Gateway
+```shell script
+$ gcloud api-gateway gateways delete shinyay-gateway --location us-central1
+```
+
 ## Features
 
 - feature:1
