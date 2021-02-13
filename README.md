@@ -122,6 +122,11 @@ $ gcloud api-gateway api-configs delete employee-app-config --api employee-app
 $ gcloud api-gateway api-configs list
 ```
 
+#### Delete Service Account
+```shell script
+$ gcloud iam service-accounts delete spring-app@(gcloud config get-value project).iam.gserviceaccount.com
+```
+
 ## Features
 
 - feature:1
