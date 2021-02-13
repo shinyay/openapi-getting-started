@@ -124,6 +124,9 @@ $ gcloud api-gateway api-configs list
 
 #### Delete Service Account
 ```shell script
+$ gcloud projects remove-iam-policy-binding (gcloud config get-value project) \
+    --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
+    --role roles/iam.serviceAccountUser
 $ gcloud iam service-accounts delete spring-app@(gcloud config get-value project).iam.gserviceaccount.com
 ```
 
