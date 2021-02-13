@@ -112,6 +112,7 @@ $ gcloud api-gateway gateways list
 #### Delete API Config
 ```shell script
 $ gcloud api-gateway api-configs delete employee-app-config --api employee-app
+$ gcloud api-gateway api-configs list
 ```
 
 ## Features
