@@ -106,6 +106,7 @@ $ gcloud run services add-iam-policy-binding employee-app \
 #### Delete API Gateway
 ```shell script
 $ gcloud api-gateway gateways delete shinyay-gateway --location us-central1
+$ gcloud api-gateway gateways list
 ```
 
 ## Features
