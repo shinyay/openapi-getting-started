@@ -91,6 +91,10 @@ $ gcloud api-gateway gateways describe shinyay-gateway --location us-central1 --
 ```
 
 ```shell script
+$ curl https://(gcloud api-gateway gateways describe shinyay-gateway --location us-central1 --format 'value(defaultHostname)')/api/v1/hello
+```
+
+```shell script
 $ gcloud run services add-iam-policy-binding employee-app \
     --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
     --role roles/run.invoker \
