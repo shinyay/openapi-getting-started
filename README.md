@@ -45,6 +45,16 @@ $ gcloud projects add-iam-policy-binding (gcloud config get-value project) \
     --role roles/iam.serviceAccountUser
 ```
 
+#### Add Service Account to Cloud Run as Invoker
+```shell script
+$ gcloud run services add-iam-policy-binding employee-app \
+    --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
+    --role roles/run.invoker \
+    --platform managed \
+    --region us-central1 \
+    --project (gcloud config get-value project)
+```
+
 #### Enable Services
 We enable the following Google services:
 
@@ -94,14 +104,6 @@ $ gcloud api-gateway gateways describe shinyay-gateway --location us-central1 --
 $ curl https://(gcloud api-gateway gateways describe shinyay-gateway --location us-central1 --format 'value(defaultHostname)')/api/v1/hello
 ```
 
-```shell script
-$ gcloud run services add-iam-policy-binding employee-app \
-    --member serviceAccount:spring-app@(gcloud config get-value project).iam.gserviceaccount.com \
-    --role roles/run.invoker \
-    --platform managed \
-    --region us-central1 \
-    --project (gcloud config get-value project)
-```
 ### Clean up
 #### Delete API Gateway
 ```shell script
