@@ -45,6 +45,11 @@ $ gcloud projects add-iam-policy-binding (gcloud config get-value project) \
     --role roles/iam.serviceAccountUser
 ```
 
+or Use Service Account for Compute
+```shell script
+$ echo (gcloud projects list --filter=(gcloud config get-value project) --format='value(PROJECT_NUMBER)')-compute@developer.gserviceaccount.com
+```
+
 #### Add Service Account to Cloud Run as Invoker
 ```shell script
 $ gcloud run services add-iam-policy-binding employee-app \
