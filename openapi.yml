@@ -1,0 +1,157 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: employee-app
+  description: Employee API
+schemes:
+  - https
+produces:
+  - application/json
+x-google-backend:
+  address: https://employee-app-l2a4p5newq-uc.a.run.app
+paths:
+  /api/v1/employees:
+    get:
+      description: ''
+      summary: findAll
+      tags:
+      - Employee Management
+      operationId: findAll
+      deprecated: false
+      produces:
+      - '*/*'
+      parameters: []
+      responses:
+        200:
+          description: Default response
+          schema:
+            type: object
+          headers: {}
+    post:
+      description: ''
+      summary: registerEmployee
+      tags:
+      - Employee Management
+      operationId: registerEmployee
+      deprecated: false
+      produces:
+      - '*/*'
+      consumes:
+      - '*/*'
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Employee'
+      responses:
+        200:
+          description: Default response
+          schema:
+            $ref: '#/definitions/Employee'
+          headers: {}
+  /api/v1/employees/{id}:
+    get:
+      description: ''
+      summary: findById
+      tags:
+      - Employee Management
+      operationId: findById
+      deprecated: false
+      produces:
+      - '*/*'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        format: int64
+        description: Unique Identifier for Employee
+      responses:
+        200:
+          description: Default response
+          schema:
+            $ref: '#/definitions/Employee'
+          headers: {}
+    put:
+      description: ''
+      summary: updateEmployee
+      tags:
+      - Employee Management
+      operationId: updateEmployee
+      deprecated: false
+      produces:
+      - '*/*'
+      consumes:
+      - '*/*'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        format: int64
+        description: Unique Identifier for Employee
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/Employee'
+      responses:
+        200:
+          description: Default response
+          schema:
+            $ref: '#/definitions/Employee'
+          headers: {}
+    delete:
+      description: ''
+      summary: deleteEmployee
+      tags:
+      - Employee Management
+      operationId: deleteEmployee
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: integer
+        format: int64
+        description: Unique Identifier for Employee
+      responses:
+        200:
+          description: Default response
+          headers: {}
+  /api/v1/hello:
+    get:
+      description: ''
+      summary: hello
+      tags:
+      - Employee Management
+      operationId: hello
+      deprecated: false
+      produces:
+      - '*/*'
+      parameters: []
+      responses:
+        200:
+          description: Default response
+          schema:
+            type: string
+          headers: {}
+definitions:
+  Employee:
+    title: Employee
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      firstName:
+        type: string
+      lastName:
+        type: string
+      role:
+        type: string
