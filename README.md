@@ -109,6 +109,11 @@ $ gcloud api-gateway gateways delete shinyay-gateway --location us-central1
 $ gcloud api-gateway gateways list
 ```
 
+#### Delete API Config
+```shell script
+$ gcloud api-gateway api-configs delete employee-app-config --api employee-app
+```
+
 ## Features
 
 - feature:1
