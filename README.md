@@ -87,6 +87,7 @@ gcloud api-gateway gateways create shinyay-gateway \
 
 ```shell script
 $ gcloud api-gateway gateways describe shinyay-gateway --location us-central1
+$ gcloud api-gateway gateways describe shinyay-gateway --location us-central1 --format 'value(defaultHostname)'
 ```
 
 ```shell script
