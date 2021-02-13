@@ -147,6 +147,7 @@ $ gcloud run services delete employee-app
 
 ## References
 - [OpenAPI v3 generator for Spring Boot](https://github.com/qaware/openapi-generator-for-spring)
+- [OpenAPI Specification](https://swagger.io/specification/)
 - [JSON to YAML](https://www.json2yaml.com/)
 - [APIMATIC](https://www.apimatic.io/dashboard)
 - [Swagger Editor](https://editor.swagger.io/)
